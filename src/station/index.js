@@ -34,6 +34,16 @@ export default (el_id_string="app", {width, height}={width: 600, height: 600})=>
 
     game.add_dynamic_role(new Monster({speed: 10, width: 10, height: 10}));
     game.add_dynamic_role(new Monster({speed: 3, width: 20, height: 20, health_point: 20}));
-    game.add_dynamic_role(new Monster({speed: 1, width: 40, height: 40, health_point: 40}));
+    game.add_dynamic_role(new Monster({speed: 1, width: 40, height: 40, health_point: 50}));
     game.add_dynamic_role(new Monster({speed: 2, health_point: 10}));
+
+    setInterval(()=>{
+        const m = new Monster({});
+        m.speed = Math.ceil(Math.random()*5)+1;
+        m.health_point = Math.ceil(Math.random()*20)+1;
+        const size = Math.ceil(Math.random()*40)+10;
+        m.width = size;
+        m.height = size;
+        game.add_dynamic_role(m);
+    }, 1000*60)
 }
