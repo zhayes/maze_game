@@ -42,7 +42,6 @@ export default class Player extends Sustance{
                 if(item.is_my_name("monster")){
                     this.health_point--;
                     if(this.health_point<=0){//生命值耗尽，游戏结束
-                        //game.remove_role(this);
                         game.over();
                     }
                 }

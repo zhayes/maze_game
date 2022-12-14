@@ -31,6 +31,12 @@ export default class Monster extends Sustance{
             this.run(this.speed*-1);
             this.random_setting_direction();
 
+            barriers.forEach((item)=>{
+                if(item.is_my_name("monster") && item.health_point){
+                    item.health_point++;
+                }
+            })
+
             if(this.first_render){//防止初始化的位置与其他障碍物重叠；
                 this.random_position();
                 return;

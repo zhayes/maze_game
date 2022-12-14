@@ -5,14 +5,15 @@ export default class Wall extends Sustance{
         super(options);
 
         this.name = "path";
+        this.is_barrier = false;
     }
 
     update(game){
         const ctx = game.ctx;
         const {x, y} = this.position;
 
-        const image = game.all_images.dark_bg;
+        const image = game.all_images.grass;
 
-        image && ctx.drawImage(image, 0, 450, this.width, this.height, x, y, this.width, this.height);
+        image && ctx.drawImage(image, 10, 40, this.width, this.height, x, y, this.width, this.height);
     }
 }

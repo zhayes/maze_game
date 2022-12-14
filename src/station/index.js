@@ -14,6 +14,7 @@ export default (el_id_string="app", {width, height}={width: 600, height: 600})=>
         images: {
             'dark_bg': './src/assets/img/tiles_final_sw.png',
             'light_bg': './src/assets/img/tiles_final_col11.png',
+            'grass': './src/assets/img/SNES - Secret of Mana - High Grass.png'
         }
     });
 
